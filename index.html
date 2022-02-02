@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+ <html>
+     <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>login page</title>
+         <link rel="stylesheet" href="style.css">
+         <script type="text/javascript" src="script.js"></script>
+         <style type="text/css">
+             body{
+                 background-image:url('login_img.html.svg');
+                 background-size: cover;
+                 background-attachment: fixed;
+                 height: auto;
+                 max-width: 100%;
+             }
+         </style>
+     </head>
+     <body>
+         <div class="log-page">
+             <div class="navbar">
+                 <div>
+                     <a href='index.html'><b>Login Page</b></a>
+                 </div>
+                 <nav>
+                     <ul id='Menu Items'>
+                         <li><a href='#home'><u>Home</u></a></li>
+                         <li><a href='#about us'><u>About Us</u></a></li>
+                         <li><a href='#services'><u>Services</u></a></li>
+                         <li><a href='#contact'><u>Contact</u></a></li>
+                         <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'" style="width:auto;"><u>Login</u></button>
+                        </button></li>
+                     </ul>
+                 </nav>
+             </div>
+             <div id='login-form' class='login-page'>
+                 <div class="form-box">
+                     <div id='button-box'>
+                     <div id='btn'></div>
+                     <button type='button' onclick='login()' class='toggle-btn'>LOGIN</button>
+                     <button type='button' onclick='register()' class='toggle-btn'>REGISTER</button>
+                 </div>
+                 <form id='login' class='input-group-login'>
+                 <input type='text' class='input-field' placeholder='Email-Id' required>
+                 <input type='password' class='input-field' placeholder='Enter Password' required>
+                 <input type='checkbox' class='check-box' required> <span class='statement'><b>Remember Password</b></span>
+                 <button type='submit' id='submit' class='submit-btn' onclick='log_success()'><b>Login</b></button>
+                 </form>
+                 <form id='register' class='input-group-register'>
+                    <input type='text' class='input-field' placeholder='First Name' required>
+                    <input type='text' class='input-field' placeholder='Last Name' required>
+                    <input type='email' class='input-field' placeholder='Email-Id' required>
+                    <input type='password' id='password' onchange = 'checkPassword();' class='input-field' name='password' placeholder='Enter Password' required>
+                    <input type='password' id='confirm_password' onchange = 'checkPassword();' class='input-field' name='confirm_password' placeholder='Confirm Password' required>
+                    <span id='message'></span>
+                    <input type='checkbox' class='check-box' required> <span class='statement'><b>I agree the terms and conditions</b></span>
+                    <button type='submit' id='submit' class='submit-btn' onclick='reg_success()' ><b>Register</b></button>
+                 </form>
+                 </div>
+             </div>
+             </div>
+             <script>
+                 var x=document.getElementById('login');
+var y=document.getElementById('register');
+var z=document.getElementById('btn');
+function register()
+{
+x.style.left='-400px';
+y.style.left='50px';
+z.style.left='110px';
+}
+function login()
+{
+x.style.left='50px';
+y.style.left='450px';
+z.style.left='0px';  
+}
+             </script>   
+     </body>
+ </html>
